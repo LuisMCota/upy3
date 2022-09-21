@@ -1,10 +1,9 @@
-class Node():
-    def _init_(self, key):
+class Node:
+    def __init__(self, key):
         self.left = None
         self.right = None
         self.val = key
 
-    # Traverse preorder
     def traversePreOrder(self):
         print(self.val, end=' ')
         if self.left:
@@ -12,7 +11,6 @@ class Node():
         if self.right:
             self.right.traversePreOrder()
 
-    # Traverse inorder
     def traverseInOrder(self):
         if self.left:
             self.left.traverseInOrder()
@@ -20,7 +18,6 @@ class Node():
         if self.right:
             self.right.traverseInOrder()
 
-    # Traverse postorder
     def traversePostOrder(self):
         if self.left:
             self.left.traversePostOrder()
