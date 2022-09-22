@@ -34,3 +34,5 @@ insertDerecha(arbol, 'F')
 insertDerecha(arbol, 'G')
 
 print(arbol)
+
+#['A', ['E', ['D', ['B', [], []], []], []], ['G', [], ['F', [], ['C', [], []]]]]
