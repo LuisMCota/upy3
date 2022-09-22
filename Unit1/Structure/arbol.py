@@ -1,58 +1,36 @@
-class Node:
-    def __init__(self, key):
-        self.left = None
-        self.right = None
-        self.val = key
-
-    def traversePreOrder(self):
-        print(self.val, end=' ')
-        if self.left:
-            self.left.traversePreOrder()
-        if self.right:
-            self.right.traversePreOrder()
-
-    def traverseInOrder(self):
-        if self.left:
-            self.left.traverseInOrder()
-        print(self.val, end=' ')
-        if self.right:
-            self.right.traverseInOrder()
-
-    def traversePostOrder(self):
-        if self.left:
-            self.left.traversePostOrder()
-        if self.right:
-            self.right.traversePostOrder()
-        print(self.val, end=' ')
+'''
+El metodo pop() elimina y retorna un elemento de una lista. Hay un parametro
+opcional, el indice a ser eliminado de la lista, si no se especifica ningun 
+indice, a.pop() elimina y retorna el ultimo elemento de la lista.
+'''
+from bisect import insort_right
 
 
-root = Node('A')
+def ArbolBinario(raiz):
+    return [raiz,[],[]]
 
-root.left = Node('B')
-root.right = Node('C')
+def insertIzquierda(raiz,nuevoValor):
+    rama_izquierda = raiz.pop(1)
+    if len(rama_izquierda) > 1:
+        raiz.insert(1,[nuevoValor,rama_izquierda,[]])
+    else:
+        raiz.insert(1, [nuevoValor,[],[]])
+        return raiz
 
-root.left.left = Node('D')
-root.right.right = Node('F')
+def insertDerecha (raiz,nuevoValor):
+    rama_derecha = raiz.pop(2)
+    if len(rama_derecha) > 1:
+        raiz.insert(2,[nuevoValor,[],rama_derecha])
+    else:
+        raiz.insert(2,[nuevoValor,[],[]])
+        return raiz
 
-root.left.left.left = Node('E')
-root.right.right.right = Node('G')
+arbol = ArbolBinario('A')
+insertIzquierda(arbol, 'B')
+insertDerecha(arbol, 'C')
+insertIzquierda(arbol, 'D')
+insertIzquierda(arbol, 'E')
+insertDerecha(arbol, 'F')
+insertDerecha(arbol, 'G')
 
-root.left.left.left.left = Node('H')
-root.right.right.right.right = Node('L')
-
-root.left.left.left.left.left = Node('I')
-root.right.right.right.right.right = Node('M')
-
-root.left.left.left.left.left.left = Node('J')
-root.right.right.right.right.right.right = Node('N')
-
-root.left.left.left.left.left.left.left = Node('K')
-root.right.right.right.right.right.right.right = Node('O')
-
-
-print("Pre order Traversal: ", end="")
-root.traversePreOrder()
-print("\nIn order Traversal: ", end="")
-root.traverseInOrder()
-print("\nPost order Traversal: ", end="")
-root.traversePostOrder()
+print(arbol)
