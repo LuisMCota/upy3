@@ -7,8 +7,11 @@ Entrada: pow(2, -3)
 Salida: 0.125
 
 Entrada: pow(3, 5)
-Salida: 234'''
 
+Salida: 234'''
+'''
+
+'''
 class potencia:
     def potencia_numero(base, exponente):
         resultado = 1
@@ -76,7 +79,7 @@ class rectangulo:
 altura = int(input("Medidas de la altura: "))
 base = int(input("Medidas de la base: "))
 medidas = rectangulo(base, altura)
-
+#uwu
 print("Área del rectangulo: ", medidas.area())
 
 '''Ejercicio 11
