@@ -44,10 +44,12 @@ while menu != 6:
         salud(len(ginger.nombre), 19 , ginger.kg)
     elif menu == 2:
         print('---------- Rocky -----------')
+        print('Peso:',rocky.kg, 'kg')
         edad(rocky.old)
         salud(len(rocky.nombre), 2, rocky.kg)
     elif menu == 3:
         print('---------- Little -----------')
+        print('Peso:',little.kg, 'kg')
         edad(little.old)
         salud(len(little.nombre), 1, little.kg)
     elif menu == 4:
