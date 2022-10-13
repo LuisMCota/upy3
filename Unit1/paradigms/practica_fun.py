@@ -7,16 +7,9 @@ class mov():
         self.ejex = int(input('Put the value of x => '))
         self.ejey = int(input('Put the value of y => '))
 
-class empleado():
-    def __init__(self,nombre, edad,sexo):
-        self.nombre = nombre
-        self.edad = edad
-        self.sexo = sexo
-        self.sucursales = []
-
-pepe = empleado('Pepe', 34,'M',['Campana', 'Zarate'])
-lucho = empleado('Lucho', 60, 'M', ['Campana', 'Casa Matriz'])
-lola = empleado('Lola', 45, 'F', ['Buenos Aires', 'Campana'])
+pepe = ('Pepe', 34,'M',['Campana', 'Zarate'])
+lucho = ('Lucho', 60, 'M', ['Campana', 'Casa Matriz'])
+lola = ('Lola', 45, 'F', ['Buenos Aires', 'Campana'])
 
 def factorial(num):
     print(math.factorial(num))
@@ -100,7 +93,15 @@ def movimientos(mov1,mov2):
     print(mov.direccion, '({},{}) la distancia entre los puntos es {}'.format(x,y,distancia))
 
 def empleados(empleado):
-    print(empleado.sucursales)
+    first = [x for x in empleado[3]]
+    print('The first sucursal of {} is {}'.format(empleado[0],first[0]))
+    for i in empleado[3]:
+        if i == 'Casa Matriz':
+            print('{} works in Casa Matriz'.format(empleado[0]))
+        else:
+            print('FALSE')
+
+    
 
 '''number = int(input('Put a number sir => '))
 factorial(number)
@@ -120,5 +121,7 @@ mov_1 = mov()
 print('The next cardinal point:')
 mov_2 = mov()
 movimientos(mov_1, mov_2)'''
-empleado(pepe)
+empleados(pepe)
+empleados(lucho)
+empleados(lola)
 
