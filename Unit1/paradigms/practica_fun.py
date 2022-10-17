@@ -29,7 +29,7 @@ def signo(num):
     else:
         print('Is neutral')
         
-def factoriales(num):
+def factoriales(num,i):
     lista = []
     p = 1
     for i in range(1,num+1):
@@ -101,12 +101,17 @@ def empleados(empleado):
         else:
             print('FALSE')
 
+def jubilarse(empleado_1,empleado_2,empleado_3):
+    if empleado_1[1] >= 65 or empleado_2[1] >= 65 or empleado_3[1] >= 60:
+        print('Are ready to retire!')
+    elif empleado_1[1] < 65 or empleado_2[1] < 65 or empleado_3[1] < 60:
+        print('Are not ready to retire')
     
 
-'''number = int(input('Put a number sir => '))
+number = int(input('Put a number sir => '))
 factorial(number)
 number = int(input('\nPut a number sir => '))
-factoriales(number)
+factoriales(number,2)
 signo(number)
 a = int(input('\nPut a number a => '))
 b = int(input('Put a number b => '))
@@ -120,8 +125,10 @@ print('\nPut the depazamiento of the cardinal points according to the x-axis and
 mov_1 = mov()
 print('The next cardinal point:')
 mov_2 = mov()
-movimientos(mov_1, mov_2)'''
+movimientos(mov_1, mov_2)
+print('')
 empleados(pepe)
 empleados(lucho)
 empleados(lola)
-
+print('')
+jubilarse(pepe,lucho,lola)
