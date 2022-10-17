@@ -1,17 +1,65 @@
-scream = lambda onomatopoeia, intensity, bedwetting: (onomatopoeia, intensity, bedwetting)
+from unittest import result
 
-kid = lambda name, age, isTall: (name, age, isTall)
 
-energiaDescream = lambda scream: len(scream[0]) * (scream[1] ** 2) if scream[2] else 3 * len(scream[1]) + scream[2]
+baobab = ['Baobab',5,10,1.7]
+maple = ['Maple',6,7,10]
 
-sullivan = lambda kid: ("A" * len(kid[0] + "GH"), 20 / kid[1], True if kid[1] < 3 else False)
+def frondoso(arbol):
+    if arbol[1] >= 6 and arbol[1] <= 15 and arbol[2] > arbol[1] and arbol[3] > 1:
+        print('El arbol',arbol[0],'es frondoso')
+    else:
+        print('El arbol',arbol[0],'no es frondoso')
 
-Vocals_Count = lambda chain: chain.count("a") + chain.count("e") + chain.count("i") + chain.count("o") + chain.count("u")
+def vida(arbol):
+    print('La esperanza de vida de tu arbol es de:',(arbol[3]*45)/2)
 
-randall = lambda kid: ("¡Mamadera!", Vocals_Count(kid[0]), True if kid[2] > 0.8 and kid[2] < 1.2 else False)
+def fact_climaticos(arbol):
+    def lluvia(arbol):
+        choose = str(input('Llovio? '))
+        if choose =='si' or choose == 'Si' or choose == 's':
+            lluvia = int(input('Cuantos mm llovio? '))
+            altura = arbol[1]+1
+            vitalidad = arbol[3]+lluvia%arbol[3]
+            print('Ahora',arbol[0],'mide', altura, 'y su vitalidad incremento a', round(vitalidad))
+        else:
+            print('OK')
 
-chuck = lambda kid: ("abcdefghijklmnopqrstuvwxyz", 1000, True)
+    def granizo(arbol):
+        granizo = str(input('Granizo? '))
+        if granizo == 'si' or granizo == 'Si' or granizo == 's':
+            result = arbol[1] - 2
+            if result >= 1:
+                print('Ahora tu arbol mide', result)
+            else:
+                print('OK')
+    
+    def tormenta(arbol):
+        altura = arbol[1]+1-2
+        vitalidad = arbol[3]+arbol[3]
+        print('\nLos datos de {} quedan asi:\n 1. Altura => {}\n 2. Vitalidad => {}\n'.format(arbol[0], altura, vitalidad))
 
-apply = lambda functions, element: list(map(lambda function: function(element), functions))
+    lluvia(arbol)
+    granizo(arbol)
+    tormenta(arbol)
 
-team= lambda monstruos, kid: apply(monstruos, kid)
+def buen_dia(arbol):
+    result = 150%arbol[3]+arbol[3]
+    if result > 5:
+        print('Es un buen dia para tu arbol {} :) '.format(arbol[0]))
+    else:
+        print('Fue un mal dia para {} :('.format(arbol[0]))
+
+
+print()
+frondoso(baobab)
+frondoso(maple)
+print()
+vida(baobab)
+vida(maple)
+print()
+fact_climaticos(baobab)
+fact_climaticos(maple)
+print()
+buen_dia(baobab)
+buen_dia(maple)
+print()
