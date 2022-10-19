@@ -10,7 +10,7 @@ class Cuerpo:
         self.dir = 0  # 0 right, 1 left, 2 down, 3 up
 
     def draw(self):
-        pygame.draw.rect(self.window, (255, 255, 255), (self.x, self.y, 10, 10))
+        pygame.draw.rect(self.window, (255, 255, 255), (self.x, self.y, 15, 15))
 
     def movement(self):
         if self.dir == 0:
@@ -30,7 +30,7 @@ class food:
         self.window = window
 
     def draw(self):
-        pygame.draw.rect(self.window, (255, 0, 0), (self.x, self.y, 10, 10))
+        pygame.draw.rect(self.window, (255, 0, 0), (self.x, self.y, 15, 15))
 
     def relocate(self):
         self.x = random.randrange(40) * 10
