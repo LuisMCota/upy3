@@ -1,5 +1,4 @@
 def symetric(matrix,orden):
-    
     simetrica = True
     for i in range(orden):
         for j in range(orden):
