@@ -1,7 +1,5 @@
 import pygame
 import random
-
-
 class Cuerpo:
     def __init__(self, window):
         self.x = 0
@@ -36,20 +34,17 @@ class food:
         self.x = random.randrange(40) * 10
         self.y = random.randrange(40) * 10
 
-
 def redraw(window):
     window.fill((0, 0, 0))
     comida.draw()
     for i in range(len(snake)):
         snake[i].draw()
 
-
 def snake_ubicacion():
     if(len(snake)) > 1:
         for i in range(len(snake)-1):
             snake[len(snake)-i-1].x = snake[len(snake)-i-2].x
             snake[len(snake) - i - 1].y = snake[len(snake) - i - 2].y
-
 
 def Colision():
     hit = False
@@ -58,7 +53,6 @@ def Colision():
             if snake[0].x == snake[i + 1].x and snake[0].y == snake[i + 1].y:
                 hit = True
     return hit
-
 
 def main():
     global comida, snake

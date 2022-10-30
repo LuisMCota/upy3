@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 18 10:20:55 2022
 
-@author: MauDev PL
-"""
 rows = int(input('ENter number of rows: '))
 cols  = int(input('ENter number of column: '))
 
