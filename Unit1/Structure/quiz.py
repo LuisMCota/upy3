@@ -7,7 +7,7 @@ vector = np.random.randint(15, size = num_vector)
 
 print('----------- YOUR ARRAY -----------\n', vector)
 
-menu = int(input('\nWhat do you want to do?\n 1. Add a element\n 2. Elimitaned a element\n 3. Enlist a element\n 4. Count a element\n 5. Calculate mean and the max number\n 6. End\n'))
+menu = int(input('\nWhat do you want to do?\n 1. Add a element\n 2. Removed an element\n 3. Enlist a element\n 4. Count a element\n 5. Calculate mean and the max number\n 6. End\n'))
 while menu != 6:
     if menu == 1:
         add = int(input('Put the element => '))
@@ -40,7 +40,7 @@ while menu != 6:
             else:
                 if x not in repetido:
                     repetido.append(x)
-        print('valores repetidos',repetido)
+        print('Valores repetidos',repetido)
     else:
         print('Error bro')
-    menu = int(input('\nWhat do you want to do?\n 1. Add a element\n 2. Elimitaned a element\n 3. Enlist a element\n 4. Count a element\n 5. Calculate mean and the max number\n 6. End\n'))
+    menu = int(input('\nWhat do you want to do?\n 1. Add a element\n 2. Removed an element\n 3. Enlist a element\n 4. Count a element\n 5. Calculate mean and the max number\n 6. End\n'))
