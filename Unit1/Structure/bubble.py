@@ -1,4 +1,4 @@
-lista = [19,1,9,7,3,10,13,15,8,12]
+lista = [40,21,4,9,10,35]
 
 def ordenamiento(lista):
     intercambios = True

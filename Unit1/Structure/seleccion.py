@@ -1,4 +1,4 @@
-lista = [11,7,8,2,0,6,10,1]
+lista = [20, 30, 40, 90, 50, 60, 70, 80, 100, 110]
 
 def ordSeleccion(lista):
     longitud = len(lista)
